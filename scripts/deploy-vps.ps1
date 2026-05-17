@@ -7,6 +7,7 @@ param(
 )
 
 $commands = @(
+  "git config --global --add safe.directory $RepoDir",
   "cd $RepoDir",
   "git fetch origin",
   "git reset --hard origin/main",
