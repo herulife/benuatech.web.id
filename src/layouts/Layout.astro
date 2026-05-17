@@ -216,7 +216,8 @@ const navItems = [
 
 	.hero {
 		align-items: center;
-		grid-template-columns: minmax(0, 1.08fr) minmax(460px, 0.92fr);
+		grid-template-columns: minmax(0, 1fr) minmax(420px, 0.88fr);
+		gap: 34px;
 	}
 
 	.hero-copy,
@@ -226,8 +227,8 @@ const navItems = [
 
 	.hero-stage {
 		position: relative;
-		min-height: 660px;
-		padding: 54px 12px 38px;
+		min-height: 600px;
+		padding: 44px 8px 24px;
 	}
 
 	.hero-copy h1,
@@ -235,8 +236,8 @@ const navItems = [
 	.section-heading h2,
 	.split-section h2,
 	.cta-banner h2 {
-		font-size: clamp(2.45rem, 5vw, 4.75rem);
-		line-height: 0.98;
+		font-size: clamp(2.2rem, 4.4vw, 4.15rem);
+		line-height: 0.96;
 		letter-spacing: -0.05em;
 		margin: 0;
 	}
@@ -257,7 +258,7 @@ const navItems = [
 	}
 
 	.hero-copy {
-		max-width: 38rem;
+		max-width: 34rem;
 	}
 
 	.hero-mobile-strip {
@@ -339,8 +340,8 @@ const navItems = [
 		overflow: hidden;
 		padding: 26px;
 		min-height: 430px;
-		width: min(100%, 440px);
-		margin: 74px 0 0 auto;
+		width: min(100%, 420px);
+		margin: 56px 0 0 auto;
 		background:
 			linear-gradient(135deg, rgba(14, 116, 144, 0.94) 0%, rgba(15, 118, 110, 0.88) 52%, rgba(16, 69, 83, 0.96) 100%);
 		border: 1px solid rgba(255, 255, 255, 0.16);
@@ -512,32 +513,20 @@ const navItems = [
 	}
 
 	.hero-badge-top-left {
-		top: 0;
-		left: 8px;
+		top: 8px;
+		left: 6px;
 		animation-delay: -0.5s;
 	}
 
-	.hero-badge-top-right {
-		top: -20px;
-		right: -4px;
-		animation-delay: -1.4s;
-	}
-
 	.hero-badge-left {
-		top: 248px;
-		left: -22px;
+		top: 220px;
+		left: -12px;
 		animation-delay: -2.2s;
 	}
 
-	.hero-badge-bottom-left {
-		left: 56px;
-		bottom: 0;
-		animation-delay: -1s;
-	}
-
 	.hero-badge-right {
-		right: -48px;
-		top: 338px;
+		right: -56px;
+		top: 300px;
 		animation-delay: -2.8s;
 	}
 
@@ -562,18 +551,13 @@ const navItems = [
 	}
 
 	.hero-arrow-top {
-		top: 86px;
-		left: -22px;
+		top: 78px;
+		left: -12px;
 	}
 
 	.hero-arrow-right {
-		top: 276px;
-		right: -80px;
-	}
-
-	.hero-arrow-bottom {
-		bottom: 26px;
-		right: 136px;
+		top: 244px;
+		right: -76px;
 	}
 
 	.section {
