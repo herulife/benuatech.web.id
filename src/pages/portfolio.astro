@@ -3,25 +3,28 @@ import Layout from '../layouts/Layout.astro';
 
 const projects = [
   {
-    category: 'Company Profile',
-    title: 'Repositioning Website untuk Bisnis Jasa',
+    category: 'Education Platform',
+    title: 'Darussunnah Parung',
     description:
-      'Penyusunan ulang halaman utama, layanan, dan CTA agar bisnis terlihat lebih premium serta lebih mudah menghasilkan lead.',
-    impact: 'Fokus pada trust, struktur pesan, dan kejelasan layanan.',
+      'Website public-facing dan sistem digital untuk lembaga pendidikan, dengan fokus pada citra institusi, alur informasi, dan kebutuhan operasional.',
+    impact: 'Fokus pada trust, struktur konten, dan pengalaman pengguna yang rapi.',
+    link: 'https://darussunnahparung.com',
   },
   {
-    category: 'Internal System',
-    title: 'Dashboard Operasional untuk Tim',
+    category: 'Commerce Platform',
+    title: 'Koalisi Cinta Buku',
     description:
-      'Sistem internal untuk mengurangi proses manual, merapikan data, dan mempercepat tindak lanjut antar bagian.',
-    impact: 'Fokus pada efisiensi operasional dan visibilitas data.',
+      'Pengembangan website layanan dan katalog online yang menggabungkan presentasi produk, alur pembelian, dan pengalaman brand yang konsisten.',
+    impact: 'Fokus pada kejelasan produk, funnel pengguna, dan performa frontend.',
+    link: 'https://cintabuku.com',
   },
   {
-    category: 'Digital Service',
-    title: 'Platform Layanan dengan Funnel yang Jelas',
+    category: 'Company Profile Direction',
+    title: 'BenuaTech Web Presence',
     description:
-      'Website layanan digital yang menyatukan presentasi produk, pengambilan lead, dan langkah tindak lanjut secara lebih terarah.',
-    impact: 'Fokus pada pengalaman pengguna dan alur konversi.',
+      'Perancangan identitas website company profile untuk menunjukkan arah brand, layanan, dan positioning digital yang lebih profesional.',
+    impact: 'Fokus pada brand clarity, visual hierarchy, dan kesiapan pengembangan jangka panjang.',
+    link: 'https://benuatech.web.id',
   },
 ];
 ---
@@ -34,8 +37,8 @@ const projects = [
     <span class="eyebrow">Portfolio</span>
     <h1>Contoh studi kasus yang menggambarkan bagaimana BenuaTech membangun solusi digital yang terasa matang.</h1>
     <p>
-      Untuk tahap awal, halaman ini disusun seperti format studi kasus. Nanti kita bisa mengganti isinya
-      dengan proyek asli, screenshot, hasil sebelum-sesudah, dan capaian bisnis yang lebih spesifik.
+      Halaman ini sekarang menampilkan contoh proyek nyata dan arah kerja yang relevan dengan layanan
+      BenuaTech. Nanti kita masih bisa menambah screenshot, capaian, dan studi kasus yang lebih rinci.
     </p>
   </section>
 
@@ -47,6 +50,7 @@ const projects = [
           <h2>{project.title}</h2>
           <p>{project.description}</p>
           <p><strong>{project.impact}</strong></p>
+          <p><a href={project.link} target="_blank" rel="noreferrer">Kunjungi project</a></p>
         </article>
       ))}
     </div>

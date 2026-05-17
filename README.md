@@ -21,3 +21,4 @@ npm run dev
 
 - domain production: `benuatech.web.id`
 - template reverse proxy: `deploy/benuatech/nginx.benuatech.web.id.conf`
+- deploy cepat dari lokal: `npm run deploy:vps`
