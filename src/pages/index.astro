@@ -67,6 +67,20 @@ const works = [
         <a class="btn btn-primary" href="/contact">Konsultasi Proyek</a>
         <a class="btn btn-secondary" href="/portfolio">Lihat Portfolio</a>
       </div>
+      <div class="hero-mobile-strip">
+        <article class="hero-mobile-chip">
+          <span>24/7</span>
+          <strong>Support project</strong>
+        </article>
+        <article class="hero-mobile-chip">
+          <span>UI</span>
+          <strong>Visual yang rapi</strong>
+        </article>
+        <article class="hero-mobile-chip">
+          <span>ROI</span>
+          <strong>Lead lebih jelas</strong>
+        </article>
+      </div>
     </div>
     <div class="hero-stage">
       <article class="hero-badge hero-badge-top-left">
@@ -150,14 +164,14 @@ const works = [
     </div>
   </section>
 
-  <section class="section">
+  <section class="section section-elevated">
     <div class="section-heading">
       <span class="eyebrow">Layanan Inti</span>
       <h2>Solusi digital yang disiapkan untuk kebutuhan yang paling sering menjadi bottleneck bisnis.</h2>
     </div>
     <div class="card-grid">
       {services.map((service) => (
-        <article class="info-card">
+        <article class="info-card info-card-feature">
           <h3>{service.title}</h3>
           <p>{service.description}</p>
         </article>
@@ -165,7 +179,7 @@ const works = [
     </div>
   </section>
 
-  <section class="section split-section">
+  <section class="section split-section section-elevated">
     <div>
       <span class="eyebrow">Tentang Kami</span>
       <h2>BenuaTech hadir untuk membantu bisnis tampil lebih kuat di ranah digital.</h2>
@@ -187,14 +201,14 @@ const works = [
     </div>
   </section>
 
-  <section class="section">
+  <section class="section section-elevated">
     <div class="section-heading">
       <span class="eyebrow">Cara Kerja</span>
       <h2>Setiap project dimulai dari kejelasan arah, bukan dari menebak-nebak tampilan.</h2>
     </div>
     <div class="card-grid">
       {process.map((item, index) => (
-        <article class="info-card">
+        <article class="info-card info-card-feature">
           <span class="card-label">Tahap {index + 1}</span>
           <p>{item}</p>
         </article>
@@ -202,7 +216,7 @@ const works = [
     </div>
   </section>
 
-  <section class="section">
+  <section class="section section-elevated">
     <div class="section-heading">
       <span class="eyebrow">Contoh Arah Proyek</span>
       <h2>Beberapa bentuk solusi yang paling relevan untuk menjadi pijakan portfolio BenuaTech.</h2>
