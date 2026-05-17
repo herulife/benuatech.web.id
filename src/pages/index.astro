@@ -1,0 +1,157 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const services = [
+  {
+    title: 'Website Company Profile',
+    description:
+      'Website bisnis yang memadukan citra profesional, performa cepat, dan struktur konten yang mudah dipahami calon klien.',
+  },
+  {
+    title: 'Portal dan Sistem Internal',
+    description:
+      'Dashboard admin, portal pengguna, dan alur operasional yang disesuaikan untuk membantu tim bekerja lebih rapi dan terukur.',
+  },
+  {
+    title: 'Integrasi dan Automasi',
+    description:
+      'Integrasi WhatsApp, formulir, pembayaran, dan automasi proses kerja agar aktivitas digital tidak lagi berjalan manual.',
+  },
+];
+
+const highlights = [
+  'Struktur pesan brand yang lebih jelas dan meyakinkan',
+  'Tampilan modern yang tetap fokus pada kenyamanan pengguna',
+  'Fondasi teknis ringan, cepat, dan siap dikembangkan',
+];
+
+const process = [
+  'Discovery untuk memahami tujuan bisnis, target audiens, dan kebutuhan utama.',
+  'Penyusunan struktur halaman dan alur pesan agar website lebih mudah dipahami.',
+  'Eksekusi desain dan pengembangan dengan fokus pada performa dan skalabilitas.',
+];
+
+const works = [
+  {
+    name: 'Company Profile untuk Brand Profesional',
+    summary:
+      'Dirancang untuk menampilkan positioning, layanan, dan bukti kerja secara lebih rapi agar calon klien cepat percaya.',
+  },
+  {
+    name: 'Portal Operasional untuk Tim',
+    summary:
+      'Merapikan alur data, form, dan proses kerja internal supaya tim tidak bergantung pada proses manual yang berulang.',
+  },
+  {
+    name: 'Website Layanan dengan Lead Funnel',
+    summary:
+      'Menggabungkan presentasi layanan, pengambilan lead, dan tindak lanjut yang lebih tertata dalam satu pengalaman digital.',
+  },
+];
+---
+
+<Layout
+  title="BenuaTech | Solusi Website dan Sistem Digital"
+  description="BenuaTech membantu bisnis membangun company profile, website layanan, dan sistem digital yang cepat, rapi, dan siap berkembang."
+>
+  <section class="hero">
+    <div class="hero-copy">
+      <span class="eyebrow">BenuaTech Digital Studio</span>
+      <h1>Membangun website dan sistem digital yang membuat bisnis terlihat lebih matang sejak kesan pertama.</h1>
+      <p>
+        BenuaTech membantu brand, lembaga, dan bisnis menyiapkan company profile, website layanan,
+        serta sistem internal dengan pendekatan yang strategis, visual yang kuat, dan fondasi teknis
+        yang ringan.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="/contact">Konsultasi Proyek</a>
+        <a class="btn btn-secondary" href="/portfolio">Lihat Portfolio</a>
+      </div>
+    </div>
+    <div class="hero-panel">
+      <p class="panel-kicker">Fokus utama</p>
+      <ul class="panel-list">
+        {highlights.map((item) => <li>{item}</li>)}
+      </ul>
+      <div class="panel-metric">
+        <strong>Fast. Clear. Credible.</strong>
+        <span>Dirancang untuk performa, kejelasan pesan, dan kesan profesional yang tahan lama.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading">
+      <span class="eyebrow">Layanan Inti</span>
+      <h2>Solusi digital yang disiapkan untuk kebutuhan yang paling sering menjadi bottleneck bisnis.</h2>
+    </div>
+    <div class="card-grid">
+      {services.map((service) => (
+        <article class="info-card">
+          <h3>{service.title}</h3>
+          <p>{service.description}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section split-section">
+    <div>
+      <span class="eyebrow">Tentang Kami</span>
+      <h2>BenuaTech hadir untuk membantu bisnis tampil lebih kuat di ranah digital.</h2>
+      <p>
+        Kami percaya website yang baik bukan hanya terlihat bagus. Ia harus mampu menjelaskan nilai
+        bisnis dengan jelas, menumbuhkan rasa percaya, dan mendukung proses penjualan atau komunikasi
+        bisnis dengan lebih lancar.
+      </p>
+      <p>
+        Karena itu, kami tidak hanya membangun tampilan. Kami membantu merapikan pesan, struktur
+        halaman, dan pengalaman pengguna agar website benar-benar bekerja untuk tujuan bisnis.
+      </p>
+    </div>
+    <div class="quote-card">
+      <p>
+        "Pendekatan kami sederhana: pahami kebutuhan bisnis, rapikan pesan brand, lalu bangun
+        pengalaman digital yang cepat, bersih, dan siap dipakai."
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading">
+      <span class="eyebrow">Cara Kerja</span>
+      <h2>Setiap project dimulai dari kejelasan arah, bukan dari menebak-nebak tampilan.</h2>
+    </div>
+    <div class="card-grid">
+      {process.map((item, index) => (
+        <article class="info-card">
+          <span class="card-label">Tahap {index + 1}</span>
+          <p>{item}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading">
+      <span class="eyebrow">Contoh Arah Proyek</span>
+      <h2>Beberapa bentuk solusi yang paling relevan untuk menjadi pijakan portfolio BenuaTech.</h2>
+    </div>
+    <div class="card-grid">
+      {works.map((work) => (
+        <article class="info-card info-card-accent">
+          <h3>{work.name}</h3>
+          <p>{work.summary}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section cta-banner">
+    <div>
+      <span class="eyebrow">Mulai Sekarang</span>
+      <h2>Kalau kamu butuh web company profile atau sistem digital, kita bisa mulai dari brief yang sederhana dulu.</h2>
+    </div>
+    <a class="btn btn-primary" href="/contact">Hubungi BenuaTech</a>
+  </section>
+</Layout>

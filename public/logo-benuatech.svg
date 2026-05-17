@@ -1,0 +1,23 @@
+<svg width="640" height="220" viewBox="0 0 640 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="btWarm" x1="22" y1="18" x2="146" y2="160" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D97706"/>
+      <stop offset="1" stop-color="#7C2D12"/>
+    </linearGradient>
+    <linearGradient id="btCool" x1="56" y1="32" x2="132" y2="146" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#14B8A6"/>
+      <stop offset="1" stop-color="#0F766E"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="14" y="14" width="140" height="140" rx="40" fill="url(#btWarm)"/>
+  <path d="M50 46H92C117.405 46 132 57.444 132 78.621C132 92.787 124.816 102.399 112.276 106.685C128.319 110.214 137 121.299 137 137.779C137 161.675 119.508 174 89.633 174H50V46Z" fill="#FFF8F0"/>
+  <path d="M73.916 68.034V97.438H90.605C101.617 97.438 107.945 92.287 107.945 82.896C107.945 73.405 101.617 68.034 90.605 68.034H73.916Z" fill="url(#btWarm)"/>
+  <path d="M73.916 118.253V151.966H93.882C107.414 151.966 115.047 146.196 115.047 135.948C115.047 125.7 107.414 118.253 93.882 118.253H73.916Z" fill="url(#btCool)"/>
+  <path d="M168 84H286V107H240V174H214V107H168V84Z" fill="#0F172A"/>
+  <path d="M318 84H439V107H344V120H424V142H344V174H318V84Z" fill="#0F172A" opacity="0"/>
+  <text x="188" y="112" fill="#0F172A" font-size="52" font-weight="700" font-family="Arial, Helvetica, sans-serif" letter-spacing="-1.6">BenuaTech</text>
+  <text x="190" y="150" fill="#B45309" font-size="20" font-weight="700" font-family="Arial, Helvetica, sans-serif" letter-spacing="5.2">DIGITAL STUDIO</text>
+  <path d="M524 86C546.644 86 564 102.685 564 124C564 145.315 546.644 162 524 162C501.356 162 484 145.315 484 124C484 102.685 501.356 86 524 86Z" stroke="#D97706" stroke-width="10"/>
+  <path d="M534 76C556.644 76 574 92.685 574 114C574 135.315 556.644 152 534 152" stroke="#0F766E" stroke-width="10" stroke-linecap="round"/>
+</svg>

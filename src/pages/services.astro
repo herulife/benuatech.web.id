@@ -1,0 +1,57 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const services = [
+  {
+    title: 'Website Company Profile',
+    points: [
+      'Landing page modern, responsif, dan meyakinkan',
+      'Struktur halaman profil perusahaan yang rapi',
+      'Optimasi performa, SEO dasar, dan kesiapan deploy',
+    ],
+  },
+  {
+    title: 'Custom Web Development',
+    points: [
+      'Dashboard dan panel admin sesuai kebutuhan',
+      'Portal pengguna, pelanggan, atau anggota tim',
+      'Integrasi formulir, API, dan workflow internal',
+    ],
+  },
+  {
+    title: 'Product and UX Direction',
+    points: [
+      'Audit kebutuhan digital dan tujuan bisnis',
+      'Wireframe, alur halaman, dan struktur konten',
+      'Arah desain yang lebih matang, konsisten, dan fokus',
+    ],
+  },
+];
+---
+
+<Layout
+  title="Layanan BenuaTech"
+  description="Layanan BenuaTech mencakup website company profile, pengembangan web custom, dan arahan UX produk digital."
+>
+  <section class="page-hero">
+    <span class="eyebrow">Layanan</span>
+    <h1>Layanan yang disiapkan untuk membantu bisnis tampil lebih kuat dan bekerja lebih tertata.</h1>
+    <p>
+      BenuaTech fokus pada solusi yang relevan, ringan, dan bisa menyesuaikan tahap pertumbuhan bisnis,
+      baik untuk kebutuhan presentasi brand maupun operasional internal.
+    </p>
+  </section>
+
+  <section class="section">
+    <div class="card-grid">
+      {services.map((service) => (
+        <article class="info-card">
+          <h2>{service.title}</h2>
+          <ul class="bullet-list">
+            {service.points.map((point) => <li>{point}</li>)}
+          </ul>
+        </article>
+      ))}
+    </div>
+  </section>
+</Layout>
