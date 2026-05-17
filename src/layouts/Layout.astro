@@ -312,7 +312,8 @@ const navItems = [
 	}
 
 	.card-grid,
-	.info-stack {
+	.info-stack,
+	.portfolio-grid {
 		display: grid;
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 		gap: 20px;
@@ -320,6 +321,29 @@ const navItems = [
 
 	.info-stack {
 		grid-template-columns: 1fr;
+	}
+
+	.portfolio-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.portfolio-card {
+		padding: 18px;
+	}
+
+	.portfolio-shot {
+		display: block;
+		margin-bottom: 18px;
+		border-radius: 20px;
+		overflow: hidden;
+		border: 1px solid var(--line);
+		box-shadow: 0 18px 40px rgba(31, 41, 55, 0.12);
+	}
+
+	.portfolio-shot img {
+		display: block;
+		width: 100%;
+		height: auto;
 	}
 
 	.info-card h2,

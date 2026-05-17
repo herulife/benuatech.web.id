@@ -1,5 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const whatsappNumber = '6282114752228';
+const whatsappMessage = encodeURIComponent(
+  'Assalamu`alaikum Heru, saya ingin diskusi kebutuhan website / company profile. Nama saya: \nNama bisnis/lembaga: \nKebutuhan utama: \nTarget deadline: '
+);
 ---
 
 <Layout
@@ -36,12 +41,33 @@ import Layout from '../layouts/Layout.astro';
           digital dengan pendekatan yang rapi, ringan, dan mudah dikembangkan.
         </p>
       </article>
+      <article class="info-card">
+        <h2>Mulai dengan cepat</h2>
+        <p>
+          Kalau belum punya brief yang rapi, kamu bisa pakai format pesan singkat yang sudah disiapkan
+          agar obrolan awal lebih cepat masuk ke inti kebutuhan.
+        </p>
+        <p><a href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}>Kirim brief via WhatsApp</a></p>
+      </article>
     </div>
     <div class="quote-card">
+      <h2>Format brief cepat</h2>
       <p>
         Kamu bisa mulai diskusi kebutuhan website atau sistem digital langsung lewat WhatsApp.
         Brief sederhana pun sudah cukup untuk memulai arah project dengan lebih jelas.
       </p>
+      <p>
+        Nama:
+        <br />
+        Bisnis atau lembaga:
+        <br />
+        Kebutuhan utama:
+        <br />
+        Deadline atau target launch:
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}>Buka WhatsApp</a>
+      </div>
     </div>
   </section>
 </Layout>

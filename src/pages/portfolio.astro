@@ -9,6 +9,7 @@ const projects = [
       'Website public-facing dan sistem digital untuk lembaga pendidikan, dengan fokus pada citra institusi, alur informasi, dan kebutuhan operasional.',
     impact: 'Fokus pada trust, struktur konten, dan pengalaman pengguna yang rapi.',
     link: 'https://darussunnahparung.com',
+    image: '/portfolio/darussunnah-parung.png',
   },
   {
     category: 'Commerce Platform',
@@ -17,6 +18,7 @@ const projects = [
       'Pengembangan website layanan dan katalog online yang menggabungkan presentasi produk, alur pembelian, dan pengalaman brand yang konsisten.',
     impact: 'Fokus pada kejelasan produk, funnel pengguna, dan performa frontend.',
     link: 'https://cintabuku.com',
+    image: '/portfolio/cintabuku.png',
   },
   {
     category: 'Company Profile Direction',
@@ -25,6 +27,7 @@ const projects = [
       'Perancangan identitas website company profile untuk menunjukkan arah brand, layanan, dan positioning digital yang lebih profesional.',
     impact: 'Fokus pada brand clarity, visual hierarchy, dan kesiapan pengembangan jangka panjang.',
     link: 'https://benuatech.web.id',
+    image: '/portfolio/benuatech.png',
   },
 ];
 ---
@@ -43,9 +46,12 @@ const projects = [
   </section>
 
   <section class="section">
-    <div class="card-grid">
+    <div class="portfolio-grid">
       {projects.map((project) => (
-        <article class="info-card info-card-accent">
+        <article class="portfolio-card info-card info-card-accent">
+          <a class="portfolio-shot" href={project.link} target="_blank" rel="noreferrer">
+            <img src={project.image} alt={`Preview ${project.title}`} loading="lazy" />
+          </a>
           <span class="card-label">{project.category}</span>
           <h2>{project.title}</h2>
           <p>{project.description}</p>
