@@ -1,5 +1,5 @@
 param(
-  [string]$Host = "103.107.206.10",
+  [string]$ServerHost = "103.107.206.10",
   [int]$Port = 2480,
   [string]$User = "ubuntu24",
   [string]$RepoDir = "/home/ubuntu24/my-docker-apps/apps/benuatech.web.id",
@@ -18,5 +18,5 @@ $commands = @(
 
 $remoteCommand = ($commands -join " && ")
 
-Write-Host "Deploying BenuaTech from origin/main to VPS $Host..."
-ssh -p $Port "$User@$Host" $remoteCommand
+Write-Host "Deploying BenuaTech from origin/main to VPS $ServerHost..."
+ssh -p $Port "$User@$ServerHost" $remoteCommand
