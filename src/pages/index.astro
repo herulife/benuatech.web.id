@@ -68,14 +68,84 @@ const works = [
         <a class="btn btn-secondary" href="/portfolio">Lihat Portfolio</a>
       </div>
     </div>
-    <div class="hero-panel">
-      <p class="panel-kicker">Fokus utama</p>
-      <ul class="panel-list">
-        {highlights.map((item) => <li>{item}</li>)}
-      </ul>
-      <div class="panel-metric">
-        <strong>Fast. Clear. Credible.</strong>
-        <span>Dirancang untuk performa, kejelasan pesan, dan kesan profesional yang tahan lama.</span>
+    <div class="hero-stage">
+      <article class="hero-badge hero-badge-top-left">
+        <span class="hero-badge-icon">24/7</span>
+        <span>
+          <strong>Support arah project</strong>
+          <small>Dari brief awal sampai struktur halaman.</small>
+        </span>
+      </article>
+
+      <article class="hero-badge hero-badge-top-right hero-badge-compact">
+        <span class="hero-tool-logo">BT</span>
+      </article>
+
+      <article class="hero-badge hero-badge-left hero-badge-compact">
+        <span class="hero-badge-icon hero-badge-icon-accent">UI</span>
+      </article>
+
+      <article class="hero-badge hero-badge-bottom-left">
+        <span class="hero-badge-icon hero-badge-icon-accent">Pro</span>
+        <span>
+          <strong>Visual yang meyakinkan</strong>
+          <small>Rapi, cepat, dan cocok untuk branding bisnis.</small>
+        </span>
+      </article>
+
+      <article class="hero-badge hero-badge-right hero-badge-dark">
+        <span class="hero-badge-icon hero-badge-icon-dark">ROI</span>
+        <span>
+          <strong>Lead & trust</strong>
+          <small>Website disiapkan untuk membantu konversi.</small>
+        </span>
+      </article>
+
+      <svg class="hero-arrow hero-arrow-top" viewBox="0 0 120 90" aria-hidden="true">
+        <path d="M8 80 C 28 52, 45 30, 86 24" />
+        <path d="M81 18 L 96 23 L 84 35" />
+      </svg>
+
+      <svg class="hero-arrow hero-arrow-right" viewBox="0 0 120 90" aria-hidden="true">
+        <path d="M12 18 C 44 18, 72 34, 98 66" />
+        <path d="M92 50 L 100 66 L 82 66" />
+      </svg>
+
+      <svg class="hero-arrow hero-arrow-bottom" viewBox="0 0 140 90" aria-hidden="true">
+        <path d="M126 24 C 98 38, 74 58, 24 62" />
+        <path d="M34 52 L 20 62 L 36 72" />
+      </svg>
+
+      <div class="hero-panel hero-panel-visual">
+        <div class="hero-window">
+          <div class="hero-window-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="hero-code">
+            <span class="hero-code-muted">// BenuaTech approach</span>
+            <span><em>const</em> brand = &#123;</span>
+            <span>&nbsp;&nbsp;clarity: <strong>'message-first'</strong>,</span>
+            <span>&nbsp;&nbsp;design: <strong>'credible'</strong>,</span>
+            <span>&nbsp;&nbsp;build: <strong>'fast and scalable'</strong>,</span>
+            <span>&#125;;</span>
+            <span class="hero-code-space"></span>
+            <span><em>const</em> results = &#123;</span>
+            <span>&nbsp;&nbsp;trust: <strong>'higher'</strong>,</span>
+            <span>&nbsp;&nbsp;leads: <strong>'clearer'</strong>,</span>
+            <span>&nbsp;&nbsp;experience: <strong>'smoother'</strong>,</span>
+            <span>&#125;;</span>
+          </div>
+        </div>
+        <div class="panel-metric">
+          <p class="panel-kicker">Fokus utama</p>
+          <ul class="panel-list">
+            {highlights.map((item) => <li>{item}</li>)}
+          </ul>
+          <strong>Fast. Clear. Credible.</strong>
+          <span>Dirancang untuk performa, kejelasan pesan, dan kesan profesional yang tahan lama.</span>
+        </div>
       </div>
     </div>
   </section>
