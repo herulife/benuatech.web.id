@@ -766,8 +766,9 @@ const navItems = [
 		.section-heading h2,
 		.split-section h2,
 		.cta-banner h2 {
-			font-size: clamp(2rem, 11vw, 3rem);
-			line-height: 0.98;
+			font-size: clamp(1.78rem, 8.8vw, 2.5rem);
+			line-height: 1.02;
+			letter-spacing: -0.04em;
 		}
 
 		.hero {
@@ -927,6 +928,10 @@ const navItems = [
 	}
 
 	@media (max-width: 560px) {
+		.hero-copy h1 {
+			max-width: 10ch;
+		}
+
 		.hero-mobile-strip {
 			grid-template-columns: 1fr;
 		}
