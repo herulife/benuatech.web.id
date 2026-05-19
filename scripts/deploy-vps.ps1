@@ -24,6 +24,7 @@ $commands = @(
   "git fetch origin",
   "git reset --hard origin/main",
   "npm ci",
+  "rm -rf dist",
   "npm run build",
   "cd $StackDir",
   "docker compose up -d --no-deps --force-recreate nginx"
