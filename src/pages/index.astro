@@ -42,6 +42,28 @@ const works = [
       'Menggabungkan presentasi layanan, pengambilan lead, dan tindak lanjut yang lebih tertata dalam satu pengalaman digital.',
   },
 ];
+
+const packages = [
+  {
+    name: 'Starter Profile',
+    fit: 'Untuk bisnis yang butuh profil online rapi dan cepat siap tampil.',
+    items: ['Homepage company profile', 'Struktur pesan layanan', 'CTA WhatsApp', 'SEO dasar'],
+  },
+  {
+    name: 'Business Website',
+    fit: 'Untuk brand yang butuh halaman lebih lengkap dan alur lead lebih jelas.',
+    items: ['Multi halaman', 'Portfolio atau katalog layanan', 'Form / WhatsApp funnel', 'Optimasi performa'],
+    featured: true,
+  },
+  {
+    name: 'Custom System',
+    fit: 'Untuk kebutuhan dashboard, portal, automasi, atau integrasi internal.',
+    items: ['Analisis workflow', 'Dashboard admin', 'Integrasi API / form', 'Support pengembangan'],
+  },
+];
+
+const whatsappBrief =
+  'https://wa.me/6282114752228?text=Assalamu%60alaikum%20Heru%2C%20saya%20ingin%20diskusi%20project%20website%20BenuaTech.%0ANama%3A%0ABisnis%2Flembaga%3A%0AKebutuhan%3A%0ATarget%20launch%3A';
 ---
 
 <Layout
@@ -57,7 +79,7 @@ const works = [
         internal yang terasa lebih meyakinkan sejak kesan pertama.
       </p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="/contact">Konsultasi Proyek</a>
+        <a class="btn btn-primary" href={whatsappBrief}>Konsultasi Proyek</a>
         <a class="btn btn-secondary" href="/portfolio">Lihat Portfolio</a>
       </div>
       <div class="hero-mobile-strip">
@@ -195,6 +217,32 @@ const works = [
   </section>
 
   <section class="section section-elevated">
+    <div class="section-heading section-heading-row">
+      <div>
+        <span class="eyebrow">Paket Layanan</span>
+        <h2>Pilih scope yang paling pas.</h2>
+      </div>
+      <p>
+        Harga final menyesuaikan kebutuhan halaman, fitur, konten, dan timeline. Kita mulai dari
+        scope kecil yang jelas dulu agar estimasi lebih akurat.
+      </p>
+    </div>
+    <div class="package-grid">
+      {packages.map((item) => (
+        <article class={`package-card info-card ${item.featured ? 'package-card-featured' : ''}`}>
+          <span class="card-label">{item.featured ? 'Paling fleksibel' : 'Scope'}</span>
+          <h3>{item.name}</h3>
+          <p>{item.fit}</p>
+          <ul class="package-list">
+            {item.items.map((point) => <li>{point}</li>)}
+          </ul>
+          <a class="package-link" href={whatsappBrief}>Diskusikan paket</a>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section section-elevated">
     <div class="section-heading">
       <span class="eyebrow">Contoh Arah Proyek</span>
       <h2>Arah project yang relevan.</h2>
@@ -213,7 +261,11 @@ const works = [
     <div>
       <span class="eyebrow">Mulai Sekarang</span>
       <h2>Mulai dari brief sederhana.</h2>
+      <p>
+        Kirim gambaran kebutuhanmu lewat WhatsApp. Nanti kita susun arah halaman, fitur, dan
+        prioritas pengerjaan.
+      </p>
     </div>
-    <a class="btn btn-primary" href="/contact">Hubungi BenuaTech</a>
+    <a class="btn btn-primary" href={whatsappBrief}>Chat WhatsApp</a>
   </section>
 </Layout>
