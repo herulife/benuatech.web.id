@@ -19,12 +19,6 @@ const services = [
   },
 ];
 
-const highlights = [
-  'Struktur pesan brand yang lebih jelas dan meyakinkan',
-  'Tampilan modern yang tetap fokus pada kenyamanan pengguna',
-  'Fondasi teknis ringan, cepat, dan siap dikembangkan',
-];
-
 const process = [
   'Discovery untuk memahami tujuan bisnis, target audiens, dan kebutuhan utama.',
   'Penyusunan struktur halaman dan alur pesan agar website lebih mudah dipahami.',
@@ -112,35 +106,37 @@ const works = [
         <path d="M92 50 L 100 66 L 82 66" />
       </svg>
 
-      <div class="hero-panel hero-panel-visual">
-        <div class="hero-window">
-          <div class="hero-window-dots">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <div class="hero-code">
-            <span class="hero-code-muted">// BenuaTech approach</span>
-            <span><em>const</em> brand = &#123;</span>
-            <span>&nbsp;&nbsp;clarity: <strong>'message-first'</strong>,</span>
-            <span>&nbsp;&nbsp;design: <strong>'credible'</strong>,</span>
-            <span>&nbsp;&nbsp;build: <strong>'fast and scalable'</strong>,</span>
-            <span>&#125;;</span>
-            <span class="hero-code-space"></span>
-            <span><em>const</em> results = &#123;</span>
-            <span>&nbsp;&nbsp;trust: <strong>'higher'</strong>,</span>
-            <span>&nbsp;&nbsp;leads: <strong>'clearer'</strong>,</span>
-            <span>&nbsp;&nbsp;experience: <strong>'smoother'</strong>,</span>
-            <span>&#125;;</span>
-          </div>
+      <div class="hero-panel hero-panel-visual hero-flow-panel">
+        <div class="hero-flow-header">
+          <span class="hero-flow-kicker">Alur lead</span>
+          <strong>Website bekerja sebagai jalur masuk calon klien.</strong>
         </div>
-        <div class="panel-metric">
-          <p class="panel-kicker">Fokus utama</p>
-          <ul class="panel-list">
-            {highlights.map((item) => <li>{item}</li>)}
-          </ul>
-          <strong>Fast. Clear. Credible.</strong>
-          <span>Dirancang untuk performa, kejelasan pesan, dan kesan profesional yang tahan lama.</span>
+        <div class="hero-flow">
+          <article class="hero-flow-step hero-flow-step-blue">
+            <span class="hero-flow-icon">01</span>
+            <div>
+              <strong>Pengunjung datang</strong>
+              <small>Dari Google, sosial media, atau referral.</small>
+            </div>
+          </article>
+          <article class="hero-flow-step hero-flow-step-amber">
+            <span class="hero-flow-icon">02</span>
+            <div>
+              <strong>Lead masuk</strong>
+              <small>Website mengarahkan ke WhatsApp atau form.</small>
+            </div>
+          </article>
+          <article class="hero-flow-step hero-flow-step-green">
+            <span class="hero-flow-icon">03</span>
+            <div>
+              <strong>Deal berjalan</strong>
+              <small>Diskusi kebutuhan, penawaran, lalu project dimulai.</small>
+            </div>
+          </article>
+        </div>
+        <div class="hero-flow-result">
+          <span>Hasil</span>
+          <strong>Kesan profesional, alur kontak lebih jelas.</strong>
         </div>
       </div>
     </div>
