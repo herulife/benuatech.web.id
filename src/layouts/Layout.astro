@@ -25,6 +25,12 @@ const navItems = [
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/icon-benuatech.svg" />
 		<link rel="icon" href="/favicon.ico" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+			rel="stylesheet"
+		/>
 		<meta name="generator" content={Astro.generator} />
 		<meta name="description" content={description} />
 		<title>{title}</title>
@@ -86,15 +92,19 @@ const navItems = [
 		--brand-dark: #7c2d12;
 		--accent: #0f766e;
 		--shadow: 0 24px 60px rgba(80, 55, 20, 0.12);
+		--font-sans: 'Plus Jakarta Sans', Aptos, 'Segoe UI', sans-serif;
+		--font-serif: Lora, Georgia, serif;
 	}
 
 	html {
-		font-family: Georgia, 'Times New Roman', serif;
+		font-family: var(--font-sans);
 		background:
 			radial-gradient(circle at top left, rgba(180, 83, 9, 0.12), transparent 28%),
 			radial-gradient(circle at top right, rgba(15, 118, 110, 0.12), transparent 24%),
 			linear-gradient(180deg, #f7f1e8 0%, #f3ece2 100%);
 		color: var(--text);
+		text-rendering: optimizeLegibility;
+		-webkit-font-smoothing: antialiased;
 	}
 
 	body {
@@ -182,7 +192,7 @@ const navItems = [
 	.btn,
 	.card-label,
 	.eyebrow {
-		font-family: Arial, sans-serif;
+		font-family: var(--font-sans);
 	}
 
 	.brand-copy small,
@@ -255,9 +265,10 @@ const navItems = [
 	.section-heading h2,
 	.split-section h2,
 	.cta-banner h2 {
-		font-size: clamp(2.2rem, 4.4vw, 4.15rem);
-		line-height: 0.96;
-		letter-spacing: -0.05em;
+		font-family: var(--font-serif);
+		font-size: clamp(2.15rem, 4.15vw, 3.95rem);
+		line-height: 1.06;
+		letter-spacing: -0.04em;
 		margin: 0;
 	}
 
@@ -271,8 +282,8 @@ const navItems = [
 	.hero-copy p,
 	.page-hero p,
 	.split-section p {
-		font-size: 1.05rem;
-		line-height: 1.8;
+		font-size: 1.02rem;
+		line-height: 1.78;
 		max-width: 62ch;
 	}
 
@@ -392,7 +403,7 @@ const navItems = [
 	.hero-flow-kicker {
 		display: block;
 		margin-bottom: 8px;
-		font-family: Arial, sans-serif;
+		font-family: var(--font-sans);
 		font-size: 0.72rem;
 		font-weight: 800;
 		letter-spacing: 0.16em;
@@ -427,7 +438,7 @@ const navItems = [
 	.hero-flow-step strong,
 	.hero-flow-step small {
 		display: block;
-		font-family: Arial, sans-serif;
+		font-family: var(--font-sans);
 	}
 
 	.hero-flow-step strong {
@@ -447,7 +458,7 @@ const navItems = [
 		width: 42px;
 		height: 42px;
 		border-radius: 14px;
-		font-family: Arial, sans-serif;
+		font-family: var(--font-sans);
 		font-size: 0.82rem;
 		font-weight: 800;
 		color: white;
@@ -475,7 +486,7 @@ const navItems = [
 	}
 
 	.hero-flow-result span {
-		font-family: Arial, sans-serif;
+		font-family: var(--font-sans);
 		font-size: 0.72rem;
 		font-weight: 800;
 		letter-spacing: 0.16em;
@@ -514,7 +525,7 @@ const navItems = [
 	.hero-badge strong,
 	.hero-badge small,
 	.hero-tool-logo {
-		font-family: Arial, sans-serif;
+		font-family: var(--font-sans);
 	}
 
 	.hero-badge strong {
@@ -745,7 +756,7 @@ const navItems = [
 		display: grid;
 		gap: 10px;
 		text-align: right;
-		font-family: Arial, sans-serif;
+		font-family: var(--font-sans);
 	}
 
 	@keyframes hero-float {
@@ -920,7 +931,7 @@ const navItems = [
 			background: rgba(255, 250, 244, 0.92);
 			border: 1px solid rgba(255, 255, 255, 0.72);
 			box-shadow: 0 16px 36px rgba(80, 55, 20, 0.1);
-			font-family: Arial, sans-serif;
+			font-family: var(--font-sans);
 		}
 
 		.hero-mobile-chip:last-child {
@@ -968,7 +979,7 @@ const navItems = [
 			border-radius: 999px;
 			background: rgba(255, 250, 244, 0.92);
 			border: 1px solid rgba(180, 83, 9, 0.1);
-			font-family: Arial, sans-serif;
+			font-family: var(--font-sans);
 			font-weight: 700;
 			color: var(--brand-dark);
 			cursor: pointer;
@@ -1003,7 +1014,7 @@ const navItems = [
 			text-align: center;
 			padding: 12px 10px;
 			border-radius: 16px;
-			font-family: Arial, sans-serif;
+			font-family: var(--font-sans);
 			background: rgba(255, 255, 255, 0.78);
 			border: 1px solid rgba(31, 41, 55, 0.06);
 		}
