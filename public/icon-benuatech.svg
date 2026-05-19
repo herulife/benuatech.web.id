@@ -1,17 +1,17 @@
 <svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="iconWarm" x1="18" y1="16" x2="144" y2="146" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#D97706"/>
-      <stop offset="1" stop-color="#7C2D12"/>
+      <stop stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#1E40AF"/>
     </linearGradient>
     <linearGradient id="iconCool" x1="62" y1="34" x2="128" y2="140" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#14B8A6"/>
-      <stop offset="1" stop-color="#0F766E"/>
+      <stop stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#0891B2"/>
     </linearGradient>
   </defs>
 
   <rect x="10" y="10" width="140" height="140" rx="40" fill="url(#iconWarm)"/>
-  <path d="M46 42H88C113.405 42 128 53.444 128 74.621C128 88.787 120.816 98.399 108.276 102.685C124.319 106.214 133 117.299 133 133.779C133 157.675 115.508 170 85.633 170H46V42Z" fill="#FFF8F0"/>
+  <path d="M46 42H88C113.405 42 128 53.444 128 74.621C128 88.787 120.816 98.399 108.276 102.685C124.319 106.214 133 117.299 133 133.779C133 157.675 115.508 170 85.633 170H46V42Z" fill="#F8FBFF"/>
   <path d="M69.916 64.034V93.438H86.605C97.617 93.438 103.945 88.287 103.945 78.896C103.945 69.405 97.617 64.034 86.605 64.034H69.916Z" fill="url(#iconWarm)"/>
   <path d="M69.916 114.253V147.966H89.882C103.414 147.966 111.047 142.196 111.047 131.948C111.047 121.7 103.414 114.253 89.882 114.253H69.916Z" fill="url(#iconCool)"/>
 </svg>

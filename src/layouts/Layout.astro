@@ -82,16 +82,17 @@ const navItems = [
 
 <style is:global>
 	:root {
-		--bg: #f4efe5;
-		--surface: rgba(255, 255, 255, 0.75);
-		--surface-strong: #fffaf2;
-		--text: #1f2937;
-		--muted: #5f6b7a;
-		--line: rgba(31, 41, 55, 0.12);
-		--brand: #b45309;
-		--brand-dark: #7c2d12;
-		--accent: #0f766e;
-		--shadow: 0 24px 60px rgba(80, 55, 20, 0.12);
+		--bg: #f8fbff;
+		--surface: rgba(255, 255, 255, 0.82);
+		--surface-strong: #ffffff;
+		--text: #0f172a;
+		--muted: #526178;
+		--line: rgba(30, 64, 175, 0.12);
+		--brand: #2563eb;
+		--brand-dark: #1e40af;
+		--accent: #0891b2;
+		--accent-soft: #e0f2fe;
+		--shadow: 0 24px 60px rgba(30, 64, 175, 0.12);
 		--font-sans: 'Plus Jakarta Sans', Aptos, 'Segoe UI', sans-serif;
 		--font-serif: Lora, Georgia, serif;
 	}
@@ -99,9 +100,9 @@ const navItems = [
 	html {
 		font-family: var(--font-sans);
 		background:
-			radial-gradient(circle at top left, rgba(180, 83, 9, 0.12), transparent 28%),
-			radial-gradient(circle at top right, rgba(15, 118, 110, 0.12), transparent 24%),
-			linear-gradient(180deg, #f7f1e8 0%, #f3ece2 100%);
+			radial-gradient(circle at top left, rgba(37, 99, 235, 0.16), transparent 28%),
+			radial-gradient(circle at top right, rgba(8, 145, 178, 0.14), transparent 24%),
+			linear-gradient(180deg, #f8fbff 0%, #eef6ff 100%);
 		color: var(--text);
 		text-rendering: optimizeLegibility;
 		-webkit-font-smoothing: antialiased;
@@ -226,7 +227,7 @@ const navItems = [
 	}
 
 	.site-nav a:hover {
-		background: rgba(180, 83, 9, 0.12);
+		background: rgba(37, 99, 235, 0.1);
 		color: var(--brand-dark);
 		transform: translateY(-1px);
 	}
@@ -330,11 +331,11 @@ const navItems = [
 	.btn-primary {
 		background: linear-gradient(135deg, var(--brand) 0%, var(--brand-dark) 100%);
 		color: white;
-		box-shadow: 0 16px 36px rgba(124, 45, 18, 0.25);
+		box-shadow: 0 16px 36px rgba(37, 99, 235, 0.25);
 	}
 
 	.btn-secondary {
-		background: rgba(15, 118, 110, 0.12);
+		background: var(--accent-soft);
 		color: var(--accent);
 	}
 
@@ -359,7 +360,7 @@ const navItems = [
 		width: min(100%, 390px);
 		margin: 42px 0 0 auto;
 		background:
-			linear-gradient(135deg, rgba(14, 116, 144, 0.94) 0%, rgba(15, 118, 110, 0.88) 52%, rgba(16, 69, 83, 0.96) 100%);
+			linear-gradient(135deg, rgba(30, 64, 175, 0.96) 0%, rgba(37, 99, 235, 0.9) 48%, rgba(8, 145, 178, 0.9) 100%);
 		border: 1px solid rgba(255, 255, 255, 0.16);
 	}
 
@@ -395,7 +396,7 @@ const navItems = [
 	.hero-flow-header {
 		padding: 18px 18px 16px;
 		border-radius: 22px;
-		background: rgba(7, 41, 48, 0.86);
+		background: rgba(15, 23, 42, 0.86);
 		color: #f8fafc;
 		box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
 	}
@@ -408,7 +409,7 @@ const navItems = [
 		font-weight: 800;
 		letter-spacing: 0.16em;
 		text-transform: uppercase;
-		color: #fde68a;
+		color: #bae6fd;
 	}
 
 	.hero-flow-header strong {
@@ -430,7 +431,7 @@ const navItems = [
 		align-items: center;
 		padding: 13px;
 		border-radius: 18px;
-		background: rgba(255, 250, 244, 0.94);
+		background: rgba(255, 255, 255, 0.94);
 		border: 1px solid rgba(255, 255, 255, 0.38);
 		box-shadow: 0 16px 36px rgba(5, 35, 40, 0.14);
 	}
@@ -465,15 +466,15 @@ const navItems = [
 	}
 
 	.hero-flow-step-blue .hero-flow-icon {
-		background: #0e7490;
+		background: #2563eb;
 	}
 
 	.hero-flow-step-amber .hero-flow-icon {
-		background: #b45309;
+		background: #1d4ed8;
 	}
 
 	.hero-flow-step-green .hero-flow-icon {
-		background: #0f766e;
+		background: #0891b2;
 	}
 
 	.hero-flow-result {
@@ -481,7 +482,7 @@ const navItems = [
 		gap: 4px;
 		padding: 14px 16px;
 		border-radius: 18px;
-		background: rgba(7, 41, 48, 0.72);
+		background: rgba(15, 23, 42, 0.72);
 		border: 1px solid rgba(255, 255, 255, 0.12);
 	}
 
@@ -509,9 +510,9 @@ const navItems = [
 		padding: 14px 18px;
 		min-width: 178px;
 		border-radius: 22px;
-		background: rgba(255, 251, 245, 0.96);
+		background: rgba(255, 255, 255, 0.96);
 		border: 1px solid rgba(255, 255, 255, 0.7);
-		box-shadow: 0 22px 50px rgba(49, 31, 8, 0.14);
+		box-shadow: 0 22px 50px rgba(30, 64, 175, 0.14);
 		backdrop-filter: blur(18px);
 		animation: hero-float 6s ease-in-out infinite;
 		transition: transform 0.28s ease, box-shadow 0.28s ease;
@@ -519,7 +520,7 @@ const navItems = [
 
 	.hero-badge:hover {
 		transform: translateY(-6px) scale(1.02);
-		box-shadow: 0 28px 65px rgba(49, 31, 8, 0.2);
+		box-shadow: 0 28px 65px rgba(30, 64, 175, 0.2);
 	}
 
 	.hero-badge strong,
@@ -557,7 +558,7 @@ const navItems = [
 	}
 
 	.hero-badge-icon-accent {
-		background: linear-gradient(135deg, #0f766e 0%, #0f3f49 100%);
+		background: linear-gradient(135deg, #0891b2 0%, #1e40af 100%);
 	}
 
 	.hero-badge-icon-dark,
@@ -579,7 +580,7 @@ const navItems = [
 	}
 
 	.hero-badge-dark {
-		background: rgba(20, 27, 28, 0.96);
+		background: rgba(15, 23, 42, 0.96);
 		color: #fff;
 	}
 
@@ -623,7 +624,7 @@ const navItems = [
 
 	.hero-arrow path {
 		fill: none;
-		stroke: #dc2626;
+		stroke: #2563eb;
 		stroke-width: 3.5;
 		stroke-linecap: round;
 		stroke-linejoin: round;
@@ -650,9 +651,9 @@ const navItems = [
 		position: relative;
 		padding: 28px;
 		border-radius: 32px;
-		background: linear-gradient(180deg, rgba(255, 255, 255, 0.34) 0%, rgba(255, 250, 244, 0.18) 100%);
+		background: linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, rgba(239, 246, 255, 0.36) 100%);
 		border: 1px solid rgba(255, 255, 255, 0.42);
-		box-shadow: 0 20px 50px rgba(97, 70, 29, 0.08);
+		box-shadow: 0 20px 50px rgba(30, 64, 175, 0.08);
 	}
 
 	.section-elevated::before {
@@ -660,7 +661,7 @@ const navItems = [
 		position: absolute;
 		inset: 0;
 		border-radius: inherit;
-		background: linear-gradient(135deg, rgba(180, 83, 9, 0.05), transparent 35%, rgba(15, 118, 110, 0.05));
+		background: linear-gradient(135deg, rgba(37, 99, 235, 0.07), transparent 35%, rgba(8, 145, 178, 0.07));
 		pointer-events: none;
 	}
 
@@ -719,8 +720,8 @@ const navItems = [
 
 	.info-card:hover {
 		transform: translateY(-4px);
-		box-shadow: 0 26px 54px rgba(80, 55, 20, 0.16);
-		border-color: rgba(180, 83, 9, 0.18);
+		box-shadow: 0 26px 54px rgba(30, 64, 175, 0.16);
+		border-color: rgba(37, 99, 235, 0.18);
 	}
 
 	.info-card-feature::after {
@@ -730,12 +731,12 @@ const navItems = [
 		height: 3px;
 		margin-top: 18px;
 		border-radius: 999px;
-		background: linear-gradient(90deg, var(--brand) 0%, rgba(15, 118, 110, 0.5) 100%);
+		background: linear-gradient(90deg, var(--brand) 0%, rgba(8, 145, 178, 0.55) 100%);
 	}
 
 	.info-card-accent {
 		background:
-			linear-gradient(180deg, rgba(255, 250, 242, 0.92) 0%, rgba(255, 245, 235, 0.82) 100%);
+			linear-gradient(180deg, rgba(255, 255, 255, 0.92) 0%, rgba(239, 246, 255, 0.86) 100%);
 	}
 
 	.cta-banner {
@@ -744,7 +745,7 @@ const navItems = [
 		align-items: center;
 		gap: 24px;
 		background:
-			linear-gradient(135deg, rgba(180, 83, 9, 0.12) 0%, rgba(15, 118, 110, 0.12) 100%),
+			linear-gradient(135deg, rgba(37, 99, 235, 0.12) 0%, rgba(8, 145, 178, 0.12) 100%),
 			var(--surface-strong);
 	}
 
@@ -928,9 +929,9 @@ const navItems = [
 			gap: 6px;
 			padding: 14px 12px;
 			border-radius: 20px;
-			background: rgba(255, 250, 244, 0.92);
+			background: rgba(255, 255, 255, 0.92);
 			border: 1px solid rgba(255, 255, 255, 0.72);
-			box-shadow: 0 16px 36px rgba(80, 55, 20, 0.1);
+			box-shadow: 0 16px 36px rgba(30, 64, 175, 0.1);
 			font-family: var(--font-sans);
 		}
 
@@ -977,8 +978,8 @@ const navItems = [
 			justify-content: center;
 			padding: 12px 18px;
 			border-radius: 999px;
-			background: rgba(255, 250, 244, 0.92);
-			border: 1px solid rgba(180, 83, 9, 0.1);
+			background: rgba(255, 255, 255, 0.92);
+			border: 1px solid rgba(37, 99, 235, 0.12);
 			font-family: var(--font-sans);
 			font-weight: 700;
 			color: var(--brand-dark);
@@ -990,7 +991,7 @@ const navItems = [
 		}
 
 		.mobile-nav[open] summary {
-			background: rgba(180, 83, 9, 0.12);
+			background: rgba(37, 99, 235, 0.1);
 		}
 
 		.mobile-nav-panel {
@@ -1003,9 +1004,9 @@ const navItems = [
 			gap: 10px;
 			padding: 14px;
 			border-radius: 22px;
-			background: rgba(255, 251, 245, 0.98);
-			border: 1px solid rgba(180, 83, 9, 0.08);
-			box-shadow: 0 20px 40px rgba(80, 55, 20, 0.12);
+			background: rgba(255, 255, 255, 0.98);
+			border: 1px solid rgba(37, 99, 235, 0.1);
+			box-shadow: 0 20px 40px rgba(30, 64, 175, 0.12);
 			backdrop-filter: blur(16px);
 			z-index: 20;
 		}
