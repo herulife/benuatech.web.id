@@ -847,8 +847,8 @@ const navItems = [
 
 		.mobile-promo-bar {
 			display: block;
-			margin: 0 -16px 16px;
-			padding: 12px 18px;
+			margin: 0 -16px;
+			padding: 13px 18px;
 			text-align: center;
 			background: linear-gradient(90deg, #dbeafe 0%, #e0f2fe 100%);
 			border-bottom: 1px solid rgba(37, 99, 235, 0.14);
@@ -875,8 +875,15 @@ const navItems = [
 		}
 
 		.site-header {
-			padding: 14px;
-			border-radius: 0 0 24px 24px;
+			position: sticky;
+			top: 0;
+			z-index: 40;
+			margin: 0 -16px;
+			padding: 28px 16px;
+			border-width: 0 0 1px;
+			border-radius: 0;
+			background: rgba(255, 255, 255, 0.96);
+			box-shadow: 0 14px 34px rgba(15, 23, 42, 0.08);
 		}
 
 		.header-main {
@@ -886,12 +893,12 @@ const navItems = [
 
 		.brand-mark,
 		.brand-mark img {
-			width: 46px;
-			height: 46px;
+			width: 54px;
+			height: 54px;
 		}
 
 		.brand-copy strong {
-			font-size: 1.05rem;
+			font-size: 1.08rem;
 		}
 
 		.brand-copy small {
@@ -1093,12 +1100,12 @@ const navItems = [
 			justify-content: center;
 			flex-direction: column;
 			gap: 6px;
-			width: 54px;
-			height: 54px;
+			width: 58px;
+			height: 58px;
 			padding: 0;
-			border-radius: 18px;
-			background: rgba(255, 255, 255, 0.92);
-			border: 1px solid rgba(37, 99, 235, 0.12);
+			border-radius: 0;
+			background: transparent;
+			border: 0;
 			font-family: var(--font-sans);
 			font-weight: 700;
 			color: var(--brand-dark);
@@ -1118,7 +1125,7 @@ const navItems = [
 		}
 
 		.mobile-nav[open] summary {
-			background: rgba(37, 99, 235, 0.1);
+			background: transparent;
 		}
 
 		.mobile-nav[open] .hamburger-line:nth-child(1) {
@@ -1135,7 +1142,7 @@ const navItems = [
 
 		.mobile-nav-panel {
 			position: fixed;
-			top: 132px;
+			top: 154px;
 			right: 18px;
 			left: 18px;
 			display: grid;
@@ -1212,6 +1219,13 @@ const navItems = [
 			max-width: calc(100vw - 48px);
 		}
 
+		.site-header {
+			width: auto;
+			max-width: none;
+			margin-inline: -12px;
+			padding-inline: 12px;
+		}
+
 		.hero-copy p,
 		.hero-flow-header strong,
 		.hero-flow-step small,
@@ -1229,6 +1243,10 @@ const navItems = [
 
 		.mobile-promo-bar {
 			margin-inline: -12px;
+		}
+
+		.mobile-nav-panel {
+			top: 150px;
 		}
 
 		.hero-copy h1 {
