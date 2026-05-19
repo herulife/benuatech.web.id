@@ -28,7 +28,7 @@ const navItems = [
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
 			rel="stylesheet"
 		/>
 		<meta name="generator" content={Astro.generator} />
@@ -94,7 +94,6 @@ const navItems = [
 		--accent-soft: #e0f2fe;
 		--shadow: 0 24px 60px rgba(30, 64, 175, 0.12);
 		--font-sans: 'Plus Jakarta Sans', Aptos, 'Segoe UI', sans-serif;
-		--font-serif: Lora, Georgia, serif;
 	}
 
 	html {
@@ -266,10 +265,11 @@ const navItems = [
 	.section-heading h2,
 	.split-section h2,
 	.cta-banner h2 {
-		font-family: var(--font-serif);
+		font-family: var(--font-sans);
 		font-size: clamp(2.15rem, 4.15vw, 3.95rem);
-		line-height: 1.06;
+		line-height: 1.04;
 		letter-spacing: -0.04em;
+		font-weight: 800;
 		margin: 0;
 	}
 
