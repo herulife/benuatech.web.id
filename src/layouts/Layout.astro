@@ -31,6 +31,9 @@ const navItems = [
 	</head>
 	<body>
 		<div class="site-shell">
+			<a class="mobile-promo-bar" href="https://wa.me/6282114752228">
+				Konsultasi awal gratis <strong>Chat WhatsApp</strong>
+			</a>
 			<header class="site-header">
 				<div class="header-main">
 					<a class="brand" href="/">
@@ -91,6 +94,12 @@ const navItems = [
 		--asset-version: 2;
 	}
 
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
+
 	html {
 		font-family: var(--font-sans);
 		background:
@@ -100,11 +109,13 @@ const navItems = [
 		color: var(--text);
 		text-rendering: optimizeLegibility;
 		-webkit-font-smoothing: antialiased;
+		overflow-x: hidden;
 	}
 
 	body {
 		margin: 0;
 		min-height: 100vh;
+		overflow-x: hidden;
 	}
 
 	a {
@@ -116,6 +127,10 @@ const navItems = [
 		max-width: 1180px;
 		margin: 0 auto;
 		padding: 24px;
+	}
+
+	.mobile-promo-bar {
+		display: none;
 	}
 
 	.site-header,
@@ -807,7 +822,34 @@ const navItems = [
 
 	@media (max-width: 900px) {
 		.site-shell {
-			padding: 16px;
+			padding: 0 16px 16px;
+		}
+
+		.page-shell,
+		.hero,
+		.hero-copy,
+		.hero-stage,
+		.site-header,
+		.header-main {
+			width: 100%;
+			min-width: 0;
+		}
+
+		.mobile-promo-bar {
+			display: block;
+			margin: 0 -16px 16px;
+			padding: 12px 18px;
+			text-align: center;
+			background: linear-gradient(90deg, #dbeafe 0%, #e0f2fe 100%);
+			border-bottom: 1px solid rgba(37, 99, 235, 0.14);
+			color: var(--text);
+			font-weight: 800;
+			line-height: 1.45;
+		}
+
+		.mobile-promo-bar strong {
+			color: var(--accent);
+			white-space: nowrap;
 		}
 
 		.site-footer,
@@ -824,6 +866,7 @@ const navItems = [
 
 		.site-header {
 			padding: 14px;
+			border-radius: 0 0 24px 24px;
 		}
 
 		.header-main {
@@ -860,21 +903,53 @@ const navItems = [
 		}
 
 		.hero-copy {
-			padding: 4px 0 0;
+			padding: 20px 0 0;
+			max-width: 100%;
+		}
+
+		.hero-mobile-pill {
+			display: inline-flex;
+			align-items: center;
+			gap: 10px;
+			padding: 10px 16px 10px 12px;
+			margin-bottom: 22px;
+			border-radius: 999px;
+			background: rgba(255, 255, 255, 0.92);
+			border: 1px solid rgba(37, 99, 235, 0.12);
+			box-shadow: 0 14px 34px rgba(30, 64, 175, 0.1);
+			letter-spacing: 0.08em;
+		}
+
+		.hero-mobile-pill span {
+			display: inline-block;
+			width: 12px;
+			height: 12px;
+			border-radius: 999px;
+			background: #22c55e;
+			box-shadow: 0 0 0 8px rgba(34, 197, 94, 0.12);
 		}
 
 		.hero-copy p {
-			font-size: 1rem;
-			line-height: 1.7;
+			max-width: 34rem;
+			font-size: 1.08rem;
+			line-height: 1.72;
 		}
 
 		.cta-row {
 			width: 100%;
+			display: grid;
+			grid-template-columns: minmax(0, 1fr) minmax(0, 0.92fr);
+			gap: 12px;
+			margin-top: 24px;
 		}
 
 		.cta-row .btn {
-			flex: 1 1 100%;
+			flex: none;
 			justify-content: center;
+			min-height: 58px;
+			padding: 15px 12px;
+			border-radius: 20px;
+			white-space: nowrap;
 		}
 
 		.hero-stage {
@@ -890,6 +965,7 @@ const navItems = [
 		.hero-panel-visual {
 			min-height: auto;
 			width: 100%;
+			max-width: 100%;
 			margin: 18px 0 0;
 			padding: 14px;
 		}
@@ -940,41 +1016,50 @@ const navItems = [
 		.hero-mobile-strip {
 			display: grid;
 			grid-template-columns: repeat(2, minmax(0, 1fr));
-			gap: 10px;
-			margin-top: 18px;
+			gap: 0;
+			margin-top: 42px;
+			padding-top: 24px;
+			border-top: 1px solid rgba(30, 64, 175, 0.14);
 		}
 
 		.hero-mobile-chip {
 			display: grid;
-			gap: 6px;
-			padding: 14px 12px;
-			border-radius: 20px;
-			background: rgba(255, 255, 255, 0.92);
-			border: 1px solid rgba(255, 255, 255, 0.72);
-			box-shadow: 0 16px 36px rgba(30, 64, 175, 0.1);
+			gap: 8px;
+			padding: 0 18px 0 0;
+			background: transparent;
+			border: 0;
+			box-shadow: none;
 			font-family: var(--font-sans);
 		}
 
-		.hero-mobile-chip:last-child {
-			grid-column: 1 / -1;
+		.hero-mobile-chip + .hero-mobile-chip {
+			padding: 0 0 0 22px;
+			border-left: 1px solid rgba(30, 64, 175, 0.16);
 		}
 
 		.hero-mobile-chip span {
-			display: inline-flex;
-			align-items: center;
-			justify-content: center;
-			width: 42px;
-			height: 42px;
-			border-radius: 14px;
-			background: linear-gradient(135deg, var(--brand) 0%, var(--brand-dark) 100%);
-			color: #fff;
-			font-size: 0.86rem;
+			width: auto;
+			height: auto;
+			border-radius: 0;
+			background: transparent;
+			color: var(--brand);
+			font-size: 0.75rem;
 			font-weight: 800;
+			letter-spacing: 0.22em;
+		}
+
+		.hero-mobile-chip small {
+			color: var(--muted);
+			font-size: 0.74rem;
+			font-weight: 800;
+			letter-spacing: 0.2em;
+			text-transform: uppercase;
 		}
 
 		.hero-mobile-chip strong {
-			font-size: 0.9rem;
-			line-height: 1.35;
+			font-size: clamp(1.45rem, 7vw, 2rem);
+			line-height: 1.04;
+			letter-spacing: -0.05em;
 		}
 
 		.section-elevated {
@@ -1045,12 +1130,46 @@ const navItems = [
 	}
 
 	@media (max-width: 560px) {
+		.site-shell {
+			padding-inline: 12px;
+		}
+
+		.site-header,
+		.hero,
+		.hero-copy,
+		.hero-stage,
+		.cta-row,
+		.hero-mobile-strip,
+		.hero-panel-visual {
+			width: calc(100vw - 48px);
+			max-width: calc(100vw - 48px);
+		}
+
+		.hero-copy p,
+		.hero-flow-header strong,
+		.hero-flow-step small,
+		.hero-flow-result strong {
+			overflow-wrap: anywhere;
+		}
+
+		.cta-row {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+
+		.cta-row .btn {
+			font-size: 0.9rem;
+		}
+
+		.mobile-promo-bar {
+			margin-inline: -12px;
+		}
+
 		.hero-copy h1 {
-			max-width: 10ch;
+			max-width: 11ch;
 		}
 
 		.hero-mobile-strip {
-			grid-template-columns: 1fr;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
 		}
 
 		.hero-mobile-chip:last-child {
