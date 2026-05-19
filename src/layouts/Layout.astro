@@ -51,11 +51,21 @@ const navItems = [
 						))}
 					</nav>
 					<details class="mobile-nav">
-						<summary>Menu</summary>
+						<summary aria-label="Buka menu navigasi">
+							<span class="hamburger-line"></span>
+							<span class="hamburger-line"></span>
+							<span class="hamburger-line"></span>
+						</summary>
 						<nav class="mobile-nav-panel">
 							{navItems.map((item) => (
 								<a href={item.href}>{item.label}</a>
 							))}
+							<div class="mobile-nav-actions">
+								<a class="mobile-nav-action mobile-nav-action-outline" href="/contact">Diskusi Project</a>
+								<a class="mobile-nav-action mobile-nav-action-primary" href="https://wa.me/6282114752228">
+									Chat WhatsApp
+								</a>
+							</div>
 						</nav>
 					</details>
 				</div>
@@ -1081,14 +1091,26 @@ const navItems = [
 			display: inline-flex;
 			align-items: center;
 			justify-content: center;
-			padding: 12px 18px;
-			border-radius: 999px;
+			flex-direction: column;
+			gap: 6px;
+			width: 54px;
+			height: 54px;
+			padding: 0;
+			border-radius: 18px;
 			background: rgba(255, 255, 255, 0.92);
 			border: 1px solid rgba(37, 99, 235, 0.12);
 			font-family: var(--font-sans);
 			font-weight: 700;
 			color: var(--brand-dark);
 			cursor: pointer;
+		}
+
+		.hamburger-line {
+			display: block;
+			width: 25px;
+			height: 3px;
+			border-radius: 999px;
+			background: #526178;
 		}
 
 		.mobile-nav summary::-webkit-details-marker {
@@ -1099,29 +1121,74 @@ const navItems = [
 			background: rgba(37, 99, 235, 0.1);
 		}
 
+		.mobile-nav[open] .hamburger-line:nth-child(1) {
+			transform: translateY(9px) rotate(45deg);
+		}
+
+		.mobile-nav[open] .hamburger-line:nth-child(2) {
+			opacity: 0;
+		}
+
+		.mobile-nav[open] .hamburger-line:nth-child(3) {
+			transform: translateY(-9px) rotate(-45deg);
+		}
+
 		.mobile-nav-panel {
-			position: absolute;
-			right: 14px;
-			left: 14px;
-			top: calc(100% + 10px);
+			position: fixed;
+			top: 132px;
+			right: 18px;
+			left: 18px;
 			display: grid;
-			grid-template-columns: repeat(2, minmax(0, 1fr));
-			gap: 10px;
-			padding: 14px;
-			border-radius: 22px;
+			grid-template-columns: 1fr;
+			gap: 0;
+			padding: 28px 28px 30px;
+			border-radius: 24px;
 			background: rgba(255, 255, 255, 0.98);
 			border: 1px solid rgba(37, 99, 235, 0.1);
-			box-shadow: 0 20px 40px rgba(30, 64, 175, 0.12);
-			z-index: 20;
+			box-shadow: 0 28px 80px rgba(15, 23, 42, 0.18);
+			z-index: 50;
 		}
 
 		.mobile-nav-panel a {
-			text-align: center;
-			padding: 12px 10px;
-			border-radius: 16px;
+			text-align: left;
+			padding: 22px 0;
+			border-radius: 0;
 			font-family: var(--font-sans);
-			background: rgba(255, 255, 255, 0.78);
-			border: 1px solid rgba(31, 41, 55, 0.06);
+			background: transparent;
+			border: 0;
+			border-bottom: 1px solid rgba(15, 23, 42, 0.12);
+			color: #4b5563;
+			font-size: clamp(1.55rem, 7vw, 2.15rem);
+			font-weight: 800;
+			letter-spacing: -0.04em;
+		}
+
+		.mobile-nav-panel a:first-child {
+			color: var(--accent);
+		}
+
+		.mobile-nav-actions {
+			display: grid;
+			gap: 14px;
+			padding-top: 26px;
+		}
+
+		.mobile-nav-panel .mobile-nav-action {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			min-height: 62px;
+			padding: 16px 18px;
+			border: 2px solid var(--accent);
+			border-radius: 12px;
+			text-align: center;
+			font-size: clamp(1.25rem, 5.5vw, 1.75rem);
+			color: var(--accent);
+		}
+
+		.mobile-nav-panel .mobile-nav-action-primary {
+			background: var(--accent);
+			color: white;
 		}
 
 		.footer-links {
@@ -1186,6 +1253,9 @@ const navItems = [
 
 		.mobile-nav-panel {
 			grid-template-columns: 1fr;
+			right: 12px;
+			left: 12px;
+			padding: 24px 24px 28px;
 		}
 	}
 
