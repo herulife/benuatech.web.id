@@ -88,11 +88,19 @@ const navItems = [
 				</div>
 			</footer>
 		</div>
-		<button class="back-to-top" type="button" aria-label="Kembali ke atas">
-			<svg viewBox="0 0 24 24" aria-hidden="true">
-				<path d="M6.5 14.5 12 9l5.5 5.5" />
-			</svg>
-		</button>
+		<div class="floating-actions" aria-label="Aksi cepat">
+			<button class="back-to-top" type="button" aria-label="Kembali ke atas">
+				<svg viewBox="0 0 24 24" aria-hidden="true">
+					<path d="M6.5 14.5 12 9l5.5 5.5" />
+				</svg>
+			</button>
+			<a class="floating-whatsapp" href="https://wa.me/6282114752228" aria-label="Chat WhatsApp BenuaTech">
+				<svg viewBox="0 0 24 24" aria-hidden="true">
+					<path d="M19.1 4.9A9.8 9.8 0 0 0 3.7 16.7L2.6 21.2l4.6-1.1A9.8 9.8 0 0 0 19.1 4.9Z" />
+					<path d="M8.9 7.4c-.2-.4-.4-.4-.7-.4h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.6s1.1 3 1.3 3.2c.2.3 2.2 3.5 5.4 4.7 2.6 1 3.2.8 3.8.7.6-.1 1.9-.8 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.7-.4l-2-1c-.3-.1-.6-.2-.8.2-.2.4-.9 1.1-1.1 1.3-.2.2-.4.2-.8.1-.4-.2-1.5-.6-2.9-1.8-1.1-1-1.8-2.2-2-2.6-.2-.4 0-.6.2-.8.2-.2.4-.5.6-.7.2-.2.2-.4.4-.6.1-.2.1-.5 0-.7l-.9-2.2Z" />
+				</svg>
+			</a>
+		</div>
 		<script>
 			const backToTop = document.querySelector('.back-to-top');
 
@@ -167,11 +175,18 @@ const navItems = [
 		display: none;
 	}
 
-	.back-to-top {
+	.floating-actions {
 		position: fixed;
 		right: 24px;
 		bottom: 24px;
 		z-index: 60;
+		display: grid;
+		gap: 10px;
+		justify-items: center;
+	}
+
+	.back-to-top,
+	.floating-whatsapp {
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
@@ -184,6 +199,9 @@ const navItems = [
 		box-shadow: 0 14px 34px rgba(15, 23, 42, 0.14);
 		color: var(--accent);
 		cursor: pointer;
+	}
+
+	.back-to-top {
 		opacity: 0;
 		pointer-events: none;
 		transform: translateY(12px) scale(0.94);
@@ -206,7 +224,23 @@ const navItems = [
 		transform: translateY(-2px) scale(1);
 	}
 
-	.back-to-top svg {
+	.floating-whatsapp {
+		background: linear-gradient(135deg, #25d366, #10b981);
+		border-color: rgba(16, 185, 129, 0.34);
+		box-shadow: 0 16px 36px rgba(16, 185, 129, 0.28);
+		color: white;
+		transition:
+			transform 0.2s ease,
+			box-shadow 0.2s ease;
+	}
+
+	.floating-whatsapp:hover {
+		box-shadow: 0 20px 44px rgba(16, 185, 129, 0.36);
+		transform: translateY(-2px);
+	}
+
+	.back-to-top svg,
+	.floating-whatsapp svg {
 		width: 22px;
 		height: 22px;
 	}
@@ -217,6 +251,10 @@ const navItems = [
 		stroke-width: 2.4;
 		stroke-linecap: round;
 		stroke-linejoin: round;
+	}
+
+	.floating-whatsapp path {
+		fill: currentColor;
 	}
 
 	.site-header,
@@ -1390,9 +1428,14 @@ const navItems = [
 			padding: 15px 18px 18px;
 		}
 
-		.back-to-top {
+		.floating-actions {
 			right: 18px;
 			bottom: 18px;
+			gap: 9px;
+		}
+
+		.back-to-top,
+		.floating-whatsapp {
 			width: 40px;
 			height: 40px;
 			box-shadow: 0 12px 30px rgba(15, 23, 42, 0.14);
@@ -1403,7 +1446,8 @@ const navItems = [
 		.info-card,
 		.btn,
 		.site-nav a,
-		.back-to-top {
+		.back-to-top,
+		.floating-whatsapp {
 			transition: none;
 		}
 
